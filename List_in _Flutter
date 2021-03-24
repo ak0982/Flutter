@@ -1,0 +1,41 @@
+void main() {
+  // Find all names that has letter a
+  // Use of Where
+  List<String> names = ['Max', 'John', 'Sara', 'Peter'];
+  Iterable<String> visibleNames = names.where(
+        (name) => name.contains('a'),
+  );
+  print(visibleNames);// output (Max, Sara)
+
+  //Find all even numbers
+  List<int> numbers = [13, 2890, 95234, 79357, 300];
+  Iterable<int> evenNumbers = numbers.where(
+        (num) => (num % 2 == 0),
+  );
+  print(evenNumbers); //  output   (2890, 95234, 300)
+/*
+  //Find all german friends
+  List<Friend> myFriends = [
+    Friend(name: 'David', originCountry: 'England'),
+    Friend(name: 'Max', originCountry: 'Germany'),
+    Friend(name: 'Sara', originCountry: 'USA'),
+    Friend(name: 'Daniel', originCountry: 'Germany')
+  ];
+
+  Iterable<Friend> germanFriends = myFriends.where(
+        (friend) => friend.originCountry.contains('Germany'),
+  );
+  germanFriends.forEach(
+        (friend) => print(friend.name),
+  );
+}
+
+class Friend {
+  String name;
+  String originCountry;
+  Friend({this.name, this.originCountry});
+  
+  */
+  
+  
+}
