@@ -39,3 +39,29 @@ class Friend {
   
   
 }
+
+
+// csv file
+  List<List<dynamic>> data = [];
+
+  loadAsset() async {
+    final myData = await rootBundle.loadString("assets/btech2018.csv");
+    List<List<dynamic>> csvTable = CsvToListConverter().convert(myData);
+
+    data = csvTable;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
